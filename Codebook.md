@@ -1,5 +1,7 @@
+# Code book of final assignment
 
-#Source files and their variables
+
+##Source files and their variables
 features.txt - List of 561 measure consisting of all recorded features including statistical calculations for each feature. For the purpose of this assignment only the mean and standard deviation (std) for each feature are used. The last seven feature have been excluded even if they have the word Mean in them as they follow a separate pattern compared to the other features.
 
 X_test.txt - Actual measurements of the features of the accelerometer for 30 subjects doing six types of physical activities. 
@@ -13,27 +15,27 @@ Size: 1 column, 2947 rows
 
 The same three files as above also exist for the train data with 7352 rows each.
 
-#Output file
+##Output file
 data_tidy.txt - The final tidy data set with average of mean and standard deviation grouped by subject (test person), activity and feature.
 Size: 5 columns, 5940 rows
 
-#Coding convention
+##Coding convention
 The R programming language is used for this project. The dplyr and reshape2 packages are used to reshape data.
 Each step of the coding is carefully explained in the run_analys.R file and highlighted here below.
 
-# read feature table and clean feature names
+### read feature table and clean feature names
 List of feature loaded from the features.txt file into a data frame. The features names are cleaned are stored as strings.
 
-# read feature measurement, activities and subject for both test and train data
+### read feature measurement, activities and subject for both test and train data
 For both test and train data all data is loaded from the source files described above. All data is stored as numericals.
 
-# select columns that include the mean and standard deviation based in name of the feature
+### select columns that include the mean and standard deviation based in name of the feature
 The columns are reduced to include only those which have calculation for statistical mean and standard deviation (std).
 
-# merging of data
+### merging of data
 The data is first merged column wise to include subject activiy and measures. After that the test and train data rows are combined to file which includes all data.
 
-# Prepare tidy data
+### Prepare tidy data
 A tidy data set is prepared with these steps with the help of piping with dplyr:
 1. group data by activity and subject
 2. summarize all columns and return the mean
@@ -42,7 +44,7 @@ A tidy data set is prepared with these steps with the help of piping with dplyr:
 5. remove .mean and .sub from the description of the measures
 6. regroup elements to show average of mean and standard deviation on the same line for each measure
 
-# Variables in the output file data_tidy.txt
+## Variables in the output file data_tidy.txt
 Finally the three last column names are renamed to be more descriptive. The final variables are:
 activity
 1 WALKING
