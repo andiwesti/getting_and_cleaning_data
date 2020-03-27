@@ -18,7 +18,7 @@ data_tidy.txt - The final tidy data set with average of mean and standard deviat
 Size: 5 columns, 5940 rows
 
 #Coding convention
-The R programming language is used for this project. The dplyr and reshape2 packages are used to reshape data. The gdata package is used to write the tidy data set to a fixed width text file.
+The R programming language is used for this project. The dplyr and reshape2 packages are used to reshape data.
 Each step of the coding is carefully explained in the run_analys.R file and highlighted here below.
 
 # read feature table and clean feature names

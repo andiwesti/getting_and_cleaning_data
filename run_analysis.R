@@ -49,4 +49,4 @@ data_tidy <- data_merged %>%
 colnames(data_tidy)[3:5] <- c('feature','mean-average','std-average')
 
 # export the tidy data to a text file
-write.fwf(data_tidy,'./data_tidy.txt')
+write.table(data_tidy,'./data_tidy.txt',row.names = FALSE)
