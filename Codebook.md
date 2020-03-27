@@ -37,11 +37,11 @@ The data is first merged column wise to include subject activiy and measures. Af
 ### 5. Prepare tidy data
 A tidy data set is prepared with these steps with the help of piping with dplyr:
 1. group data by activity and subject
-2. summarize all columns and return the mean
-3. regroup measures from columns to be elements of a single variable column
-4. create new column to identify if element is mean or standard deviation
-5. remove .mean and .sub from the description of the measures
-6. regroup elements to show average of mean and standard deviation on the same line for each measure
+1. summarize all columns and return the mean
+1. regroup measures from columns to be elements of a single variable column
+1. create new column to identify if element is mean or standard deviation
+1. remove .mean and .sub from the description of the measures
+1. regroup elements to show average of mean and standard deviation on the same line for each measure
 
 ## Variables in the output file data_tidy.txt
 Finally the three last column names are renamed to be more descriptive. The final variables are:
