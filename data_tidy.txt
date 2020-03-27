@@ -1,4 +1,4 @@
-activity subject variable mean std
+activity subject feature mean-average std-average
 1  1 BodyAcc.X            2.773308e-01 -0.2837402588
 1  1 BodyAcc.X.1         -2.027943e-01 -0.3191347196
 1  1 BodyAcc.Y           -1.738382e-02  0.1144613367
